@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/jasmine-sauce-ci/version', __FILE__)
+require File.expand_path('../lib/jasmine-selenium-sauce/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Daren"]
   gem.email         = ["darend@gmail.com"]
   gem.description   = %q{Runs Jasmine suites on any server through Saucelabs}
   gem.summary       = %q{Uses SauceLabs to connect to your server and run your Jasmine suites, producing an RSpec report}
-  gem.homepage      = "https://github.com/darend/jasmine-sauce-ci"
+  gem.homepage      = "https://github.com/darend/jasmine-selenium-sauce"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "jasmine-sauce-ci"
+  gem.name          = "jasmine-selenium-sauce"
   gem.require_paths = ["lib"]
   gem.version       = Jasmine::Sauce::Ci::VERSION
 

@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 require_relative 'vcr_helper'
-require 'jasmine-sauce-ci'
+require 'jasmine-selenium-sauce'
 require 'reporter_fake'
 
 describe Jasmine::Sauce::CI::Main do

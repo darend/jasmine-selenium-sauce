@@ -1,9 +1,9 @@
-require 'jasmine-sauce-ci/version'
-require 'jasmine-sauce-ci/jasmine_results'
-require 'jasmine-sauce-ci/rspec_reporter'
-require 'jasmine-sauce-ci/sauce_config'
-require 'jasmine-sauce-ci/selenium_runner'
-require 'jasmine-sauce-ci/selenium_saucelabs_driver'
+require 'jasmine-selenium-sauce/version'
+require 'jasmine-selenium-sauce/jasmine_results'
+require 'jasmine-selenium-sauce/rspec_reporter'
+require 'jasmine-selenium-sauce/sauce_config'
+require 'jasmine-selenium-sauce/selenium_runner'
+require 'jasmine-selenium-sauce/selenium_saucelabs_driver'
 
 module Jasmine
   module Sauce
@@ -24,4 +24,4 @@ module Jasmine
   end
 end
 
-require 'jasmine-sauce-ci/tasks/railtie' if defined?(Rails)
+require 'jasmine-selenium-sauce/tasks/railtie' if defined?(Rails)

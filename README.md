@@ -6,7 +6,7 @@ Uses SauceLabs to connect to your server and run your Jasmine suites, producing 
 
 Add this line to your application's Gemfile:
 
-    gem 'jasmine-sauce-ci'
+    gem 'jasmine-selenium-sauce'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jasmine-sauce-ci
+    $ gem install jasmine-selenium-sauce
 
 ## Usage
 
