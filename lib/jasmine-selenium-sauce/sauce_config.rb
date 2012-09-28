@@ -5,9 +5,9 @@ module Jasmine
       class SauceConfig
 
         def validate
-          raise "You must set SAUCELABS_URL" unless saucelabs_server_url
-          raise "You must set JASMINE_URL" unless jasmine_server_url
-          raise "You must set SAUCE_BROWSER" unless browser
+          raise ArgumentError.new("SAUCELABS_URL was not set") unless saucelabs_server_url
+          raise ArgumentError.new("JASMINE_URL was not set") unless jasmine_server_url
+          raise ArgumentError.new("SAUCE_BROWSER was not set") unless browser
         end
 
         def saucelabs_server_url

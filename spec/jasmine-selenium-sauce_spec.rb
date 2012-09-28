@@ -1,14 +1,16 @@
 require_relative 'spec_helper'
 require_relative 'vcr_helper'
 require 'jasmine-selenium-sauce'
+require 'sauce_config'
 require 'reporter_fake'
 
 describe Jasmine::Sauce::CI::Main do
 
-  let(:reporter) { ReporterFake.new }
-  subject { Jasmine::Sauce::CI::Main.run(reporter) }
-
   describe "#run" do
+
+    let(:config) { Jasmine::Sauce::CI::SauceConfig.new }
+    let(:reporter) { ReporterFake.new }
+    subject { Jasmine::Sauce::CI::Main.run(config, reporter) }
 
     after do
       ENV.delete('SAUCELABS_URL')

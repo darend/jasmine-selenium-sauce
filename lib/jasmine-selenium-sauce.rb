@@ -10,16 +10,13 @@ module Jasmine
     module CI
 
       class Main
-        def self.run(reporter = RspecReporter.new)
-          config = SauceConfig.new
-          config.validate
+        def self.run(config, reporter = RspecReporter.new)
           driver = SeleniumSauceLabsDriver.new(config)
           selenium_runner = SeleniumRunner.new(driver)
           results = selenium_runner.run(config.jasmine_server_url)
           reporter.report(results)
         end
       end
-
     end
   end
 end

@@ -35,7 +35,10 @@ module Jasmine
         end
 
         def fetch_suites
-          evaluate_js("var result = jsApiReporter.suites(); if (window.Prototype && Object.toJSON) { return Object.toJSON(result) } else { return JSON.stringify(result) }")
+          evaluate_js(
+              "var result = jsApiReporter.suites(); " \
+               "if (window.Prototype && Object.toJSON) { return Object.toJSON(result) } " \
+               "else { return JSON.stringify(result) }")
         end
 
         def jasmine_execution_timeout
@@ -53,7 +56,10 @@ module Jasmine
         def fetch_suite_results(suites)
           spec_results = {}
           extract_spec_ids(suites).each_slice(@result_batch_size) do |slice|
-            slice_results = evaluate_js("var result = jsApiReporter.resultsForSpecs(#{json_generate(slice)}); if (window.Prototype && Object.toJSON) { return Object.toJSON(result) } else { return JSON.stringify(result) }")
+            slice_results = evaluate_js(
+                "var result = jsApiReporter.resultsForSpecs(#{json_generate(slice)}); " \
+                 "if (window.Prototype && Object.toJSON) { return Object.toJSON(result) } " \
+                 "else { return JSON.stringify(result) }")
             spec_results.merge!(slice_results)
           end
           spec_results

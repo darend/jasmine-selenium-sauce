@@ -26,7 +26,7 @@ describe Jasmine::Sauce::CI::SauceConfig do
         ENV['JASMINE_URL'] = 'jasmine'
         ENV['SAUCE_BROWSER'] = 'browser'
       end
-      specify { expect { subject }.to raise_error  }
+      specify { expect { subject }.to raise_error(ArgumentError)  }
     end
 
     context "when jasmine url is not set" do
@@ -34,7 +34,7 @@ describe Jasmine::Sauce::CI::SauceConfig do
         ENV['SAUCELABS_URL'] = 'sauce'
         ENV['SAUCE_BROWSER'] = 'browser'
       end
-      specify { expect { subject }.to raise_error  }
+      specify { expect { subject }.to raise_error(ArgumentError)  }
     end
 
     context "when browser is not set" do
@@ -42,7 +42,7 @@ describe Jasmine::Sauce::CI::SauceConfig do
         ENV['SAUCELABS_URL'] = 'sauce'
         ENV['JASMINE_URL'] = 'jasmine'
       end
-      specify { expect { subject }.to raise_error  }
+      specify { expect { subject }.to raise_error(ArgumentError)  }
     end
   end
   

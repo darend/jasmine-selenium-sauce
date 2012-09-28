@@ -1,6 +1,10 @@
 require 'enumerator'
 require 'rspec'
 
+#
+# Reused from https://github.com/pivotal/jasmine-gem
+#
+
 module Jasmine
   module Sauce
     module CI
