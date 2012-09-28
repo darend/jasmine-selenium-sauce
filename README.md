@@ -44,6 +44,14 @@ Which browser SauceLabs should use to run your tests:
 
 ### Optional Configuration
 
+#### RSpec
+
+You can specify the format of the RSpec report with:
+
+    JASMINE_SPEC_FORMAT=documentation
+
+#### Sauce Labs Configuration
+
 See [sauce_config.rb](https://github.com/darend/jasmine-selenium-sauce/tree/master/lib/jasmine-selenium-sauce/sauce_config.rb)
 
 ## Contributing
