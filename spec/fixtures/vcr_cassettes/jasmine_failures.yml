@@ -1,0 +1,319 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session
+    body:
+      encoding: UTF-8
+      string: ! '{"desiredCapabilities":{"platform":"VISTA","browserName":"chrome","browser-version":null,"record-screenshots":false,"record-video":false,"idle-timeout":90,"max-duration":180,"name":"Jasmine"}}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '192'
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 28 Sep 2012 00:51:51 GMT
+      connection:
+      - close
+      content-type:
+      - text/html
+      location:
+      - http://ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:20 GMT
+- request:
+    method: get
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 28 Sep 2012 00:51:58 GMT
+      connection:
+      - close
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 0, "sessionId": "b784b105070b484d8e651fe477de76bf", "hCode":
+        2326550, "value": {"rotatable": false, "browserConnectionEnabled": false,
+        "acceptSslCerts": false, "cssSelectorsEnabled": true, "javascriptEnabled":
+        true, "nativeEvents": true, "databaseEnabled": false, "chrome.chromedriverVersion":
+        "21.0.1180.4", "locationContextEnabled": false, "platform": "XP", "browserName":
+        "chrome", "takesScreenshot": true, "hasMetadata": true, "version": "21.0.1180.83",
+        "applicationCacheEnabled": false, "webStorageEnabled": true, "handlesAlerts":
+        true, "chrome.nativeEvents": false}, "class": "org.openqa.selenium.remote.Response"}'
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:20 GMT
+- request:
+    method: post
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf/url
+    body:
+      encoding: UTF-8
+      string: ! '{"url":"http://jasmine.server.com/jasmine"}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '45'
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      date:
+      - Fri, 28 Sep 2012 00:51:58 GMT
+      connection:
+      - close
+      content-type:
+      - text/plain
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:46 GMT
+- request:
+    method: post
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"return jsApiReporter && jsApiReporter.started","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '68'
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 28 Sep 2012 00:52:24 GMT
+      connection:
+      - close
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 0, "sessionId": "b784b105070b484d8e651fe477de76bf", "hCode":
+        9110923, "class": "org.openqa.selenium.remote.Response", "value": true}'
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:46 GMT
+- request:
+    method: post
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"var result = jsApiReporter.suites(); if (window.Prototype
+        && Object.toJSON) { return Object.toJSON(result) } else { return JSON.stringify(result)
+        }","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '170'
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 28 Sep 2012 00:52:24 GMT
+      connection:
+      - close
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 0, "sessionId": "b784b105070b484d8e651fe477de76bf", "hCode":
+        16658781, "class": "org.openqa.selenium.remote.Response", "value": "[{\"id\":0,\"name\":\"Sample
+        Suite\",\"type\":\"suite\",\"children\":[{\"id\":1,\"name\":\"Describe block\",\"type\":\"suite\",\"children\":[{\"id\":0,\"name\":\"simple
+        test\",\"type\":\"spec\",\"children\":[]},{\"id\":2,\"name\":\"Nested block\",\"type\":\"suite\",\"children\":[{\"id\":1,\"name\":\"inner
+        test\",\"type\":\"spec\",\"children\":[]}]}]},{\"id\":3,\"name\":\"Another
+        block\",\"type\":\"suite\",\"children\":[{\"id\":2,\"name\":\"another test\",\"type\":\"spec\",\"children\":[]}]}]}]"}'
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:46 GMT
+- request:
+    method: post
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"return jsApiReporter.finished","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '52'
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 28 Sep 2012 00:52:24 GMT
+      connection:
+      - close
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 0, "sessionId": "b784b105070b484d8e651fe477de76bf", "hCode":
+        26030331, "class": "org.openqa.selenium.remote.Response", "value": true}'
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:46 GMT
+- request:
+    method: post
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"var result = jsApiReporter.resultsForSpecs([0,1,2]); if
+        (window.Prototype && Object.toJSON) { return Object.toJSON(result) } else
+        { return JSON.stringify(result) }","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '186'
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 28 Sep 2012 00:52:24 GMT
+      connection:
+      - close
+      content-type:
+      - application/json;charset=UTF-8
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ! '{"status": 0, "sessionId": "b784b105070b484d8e651fe477de76bf", "hCode":
+        25232872, "class": "org.openqa.selenium.remote.Response", "value": "{\"0\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"1\":{\"result\":\"failed\",\"messages\":[{\"passed\":false,\"type\":\"expect\",\"message\":\"Expected
+        ''false'' to equal ''true''.\",\"trace\":{\"stack\":\"Error: Expected ''false''
+        to equal ''true''.\\n    at new jasmine.ExpectationResult (http://jasmine.server.com/assets/jasmine.js?body=1:102:32)\\n    at
+        null.toEqual (http://jasmine.server.com/assets/jasmine.js?body=1:1194:29)\\n    at
+        null.<anonymous> (http://jasmine.server.com/assets/sample/sample_spec.js?body=1:10:34)\\n    at
+        jasmine.Block.execute (http://jasmine.server.com/assets/jasmine.js?body=1:1024:15)\\n    at
+        jasmine.Queue.next_ (http://jasmine.server.com/assets/jasmine.js?body=1:2025:31)\\n    at
+        jasmine.Queue.start (http://jasmine.server.com/assets/jasmine.js?body=1:1978:8)\\n    at
+        jasmine.Spec.execute (http://jasmine.server.com/assets/jasmine.js?body=1:2305:14)\\n    at
+        jasmine.Queue.next_ (http://jasmine.server.com/assets/jasmine.js?body=1:2025:31)\\n    at
+        jasmine.Queue.start (http://jasmine.server.com/assets/jasmine.js?body=1:1978:8)\\n    at
+        jasmine.Suite.execute (http://jasmine.server.com/assets/jasmine.js?body=1:2450:14)\"}}]},\"2\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]}}"}'
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:46 GMT
+- request:
+    method: delete
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/b784b105070b484d8e651fe477de76bf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Ruby
+      authorization:
+      - Basic cGlwZXdpc2U6ZTA3MDkxYzUtZTFhYy00NzRlLWEzZTEtZGRkYjBiOTRmY2Y3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      date:
+      - Fri, 28 Sep 2012 00:52:24 GMT
+      connection:
+      - close
+      content-type:
+      - text/plain
+      server:
+      - monocle/0.17
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Fri, 28 Sep 2012 00:52:48 GMT
+recorded_with: VCR 2.2.5

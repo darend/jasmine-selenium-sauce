@@ -1,12 +1,12 @@
 # Jasmine::Sauce::Ci
 
-TODO: Write a gem description
+Uses SauceLabs to connect to your server and run your Jasmine suites, producing an RSpec report
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'jasmine-sauce-ci'
+    gem 'jasmine-selenium-sauce'
 
 And then execute:
 
@@ -14,11 +14,37 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jasmine-sauce-ci
+    $ gem install jasmine-selenium-sauce
 
 ## Usage
 
-TODO: Write usage instructions here
+    rake jasmine:sauce
+
+### Required Environment Variables
+
+Requires the following environment variables to be set:
+
+#### SAUCELABS_URL
+
+URL for Saucelabs with your credentials included:
+
+    SAUCELABS_URL=http://username:password@ondemand.saucelabs.com:80/wd/hub
+
+#### JASMINE_URL
+
+Where your Jasmine tests are hosted:
+
+    JASMINE_URL=http://my.server.com/jasmine
+
+#### SAUCE_BROWSER
+
+Which browser SauceLabs should use to run your tests:
+
+    SAUCE_BROWSER=chrome
+
+### Optional Configuration
+
+See [sauce_config.rb](https://github.com/darend/jasmine-selenium-sauce/tree/master/lib/jasmine-selenium-sauce/sauce_config.rb)
 
 ## Contributing
 
