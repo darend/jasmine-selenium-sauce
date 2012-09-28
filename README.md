@@ -18,6 +18,8 @@ Or install it yourself as:
 
 ## Usage
 
+    rake jasmine:sauce
+
 Requires the following environment variables to be set:
 
 ### SAUCELABS_URL
