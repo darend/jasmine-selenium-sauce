@@ -2,6 +2,8 @@
 
 Uses SauceLabs to connect to your server and run your Jasmine suites, producing an RSpec report
 
+## Build Status [<img src="https://secure.travis-ci.org/darend/jasmine-selenium-sauce.png"/>](http://travis-ci.org/darend/jasmine-selenium-sauce)
+
 ## Installation
 
 Add this line to your application's Gemfile:
