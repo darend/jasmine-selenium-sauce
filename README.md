@@ -20,25 +20,31 @@ Or install it yourself as:
 
     rake jasmine:sauce
 
+### Required Environment Variables
+
 Requires the following environment variables to be set:
 
-### SAUCELABS_URL
+#### SAUCELABS_URL
 
 URL for Saucelabs with your credentials included:
 
     SAUCELABS_URL=http://username:password@ondemand.saucelabs.com:80/wd/hub
 
-### JASMINE_URL
+#### JASMINE_URL
 
 Where your Jasmine tests are hosted:
 
     JASMINE_URL=http://my.server.com/jasmine
 
-### SAUCE_BROWSER
+#### SAUCE_BROWSER
 
 Which browser SauceLabs should use to run your tests:
 
     SAUCE_BROWSER=chrome
+
+### Optional Configuration
+
+See [sauce_config.rb](https://github.com/darend/jasmine-selenium-sauce/tree/master/lib/jasmine-selenium-sauce/sauce_config.rb)
 
 ## Contributing
 
