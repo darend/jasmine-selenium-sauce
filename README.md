@@ -2,7 +2,10 @@
 
 # Jasmine::Sauce::Ci
 
-Uses SauceLabs to connect to your server and run your Jasmine suites, producing an RSpec report
+Rake tasks for running your Jasmine suite via a local browse or through SauceLabs using the 
+[Selenium Webdriver](http://seleniumhq.org/projects/webdriver/).
+
+Can be used in your CI builds to enable running Jasmine suites.
 
 ## Installation
 
