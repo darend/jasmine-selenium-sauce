@@ -4,8 +4,8 @@ require File.expand_path('../lib/jasmine-selenium-sauce/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Daren"]
   gem.email         = ["darend@gmail.com"]
-  gem.description   = %q{Rake tasks for running your Jasmine suite via a local browse or through SauceLabs}
-  gem.summary       = %q{Rake tasks for running your Jasmine suite via a local browse or through SauceLabs. Can be used in your CI builds to enable running Jasmine suites}
+  gem.description   = %q{Rake tasks for running your Jasmine suite via a local browser or through SauceLabs}
+  gem.summary       = %q{Rake tasks for running your Jasmine suite via a local browser or through SauceLabs. Can be used in your CI builds to enable running Jasmine suites}
   gem.homepage      = "https://github.com/darend/jasmine-selenium-sauce"
 
   gem.files         = `git ls-files`.split($\)

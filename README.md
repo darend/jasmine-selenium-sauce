@@ -2,7 +2,7 @@
 
 # Jasmine::Sauce::Ci
 
-Rake tasks for running your Jasmine suite via a local browse or through SauceLabs using the 
+Rake tasks for running your Jasmine suite via a local browser or through SauceLabs using the
 [Selenium Webdriver](http://seleniumhq.org/projects/webdriver/).
 
 Can be used in your CI builds to enable running Jasmine suites.
