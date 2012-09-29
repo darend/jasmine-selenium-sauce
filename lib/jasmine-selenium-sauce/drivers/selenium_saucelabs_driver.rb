@@ -1,10 +1,9 @@
-require 'selenium-webdriver'
-require 'json'
+require_relative 'selenium_driver'
 
 module Jasmine
   module Sauce
     module CI
-      class SeleniumSauceLabsDriver
+      class SeleniumSauceLabsDriver < SeleniumDriver
 
         def initialize(sauce_config)
           @driver = create_driver(sauce_config)
@@ -19,19 +18,6 @@ module Jasmine
           options[:url] = sauce_config.saucelabs_server_url
           options[:desired_capabilities] = generate_capabilities(sauce_config)
           Selenium::WebDriver.for :remote, options
-        end
-
-        def connect(url)
-          @driver.navigate.to url
-        end
-
-        def disconnect
-          @driver.quit
-        end
-
-        def evaluate_js(script)
-          result = @driver.execute_script(script)
-          JSON.parse("{\"result\":#{result}}", :max_nesting => false)["result"]
         end
 
         def generate_capabilities(sauce_config)

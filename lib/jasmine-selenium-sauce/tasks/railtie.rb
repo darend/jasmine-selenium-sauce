@@ -8,7 +8,7 @@ module Jasmine
         railtie_name :jasmine_sauce_ci
 
         rake_tasks do
-          load "jasmine-selenium-sauce/tasks/sauce.rake"
+          load "jasmine-selenium-sauce/tasks/jasmine_selenium_sauce.rake"
         end
       end
 

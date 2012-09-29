@@ -1,0 +1,286 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session
+    body:
+      encoding: UTF-8
+      string: ! '{"desiredCapabilities":{"browserName":"firefox","version":"","platform":"ANY","javascriptEnabled":true,"cssSelectorsEnabled":true,"takesScreenshot":true,"nativeEvents":false,"rotatable":false}}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '193'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 303
+      message: See Other
+    headers:
+      location:
+      - http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356
+      connection:
+      - close
+      content-length:
+      - '0'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:37 GMT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      connection:
+      - close
+      content-length:
+      - '283'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:37 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"getSessionCapabilities","sessionId":"b698ea37-e045-7245-bc43-ee08c944d356","status":0,"value":{"cssSelectorsEnabled":true,"browserName":"firefox","handlesAlerts":true,"javascriptEnabled":true,"nativeEvents":false,"platform":"Darwin","takesScreenshot":true,"version":"15.0"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356/url
+    body:
+      encoding: UTF-8
+      string: ! '{"url":"http://localhost:3000/jasmine"}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '39'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      connection:
+      - close
+      content-length:
+      - '87'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:38 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"get","sessionId":"b698ea37-e045-7245-bc43-ee08c944d356","status":0,"value":""}'
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"return jsApiReporter && jsApiReporter.started","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '68'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      connection:
+      - close
+      content-length:
+      - '99'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:38 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"executeScript","sessionId":"b698ea37-e045-7245-bc43-ee08c944d356","status":0,"value":true}'
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"var result = jsApiReporter.suites(); if (window.Prototype
+        && Object.toJSON) { return Object.toJSON(result) } else { return JSON.stringify(result)
+        }","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '170'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      connection:
+      - close
+      content-length:
+      - '735'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:38 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"executeScript","sessionId":"b698ea37-e045-7245-bc43-ee08c944d356","status":0,"value":"[{\"id\":0,\"name\":\"Document
+        Model\",\"type\":\"suite\",\"children\":[{\"id\":1,\"name\":\"URL\",\"type\":\"suite\",\"children\":[{\"id\":0,\"name\":\"when
+        new\",\"type\":\"spec\",\"children\":[]},{\"id\":1,\"name\":\"when is not
+        new\",\"type\":\"spec\",\"children\":[]}]}]},{\"id\":2,\"name\":\"Documents
+        Router\",\"type\":\"suite\",\"children\":[{\"id\":3,\"name\":\"routes\",\"type\":\"suite\",\"children\":[{\"id\":2,\"name\":\"fires
+        index on blank hash\",\"type\":\"spec\",\"children\":[]},{\"id\":3,\"name\":\"fires
+        new\",\"type\":\"spec\",\"children\":[]},{\"id\":4,\"name\":\"fires edit\",\"type\":\"spec\",\"children\":[]}]}]}]"}'
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"return jsApiReporter.finished","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '52'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      connection:
+      - close
+      content-length:
+      - '99'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:38 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"executeScript","sessionId":"b698ea37-e045-7245-bc43-ee08c944d356","status":0,"value":true}'
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356/execute
+    body:
+      encoding: UTF-8
+      string: ! '{"script":"var result = jsApiReporter.resultsForSpecs([0,1,2,3,4]);
+        if (window.Prototype && Object.toJSON) { return Object.toJSON(result) } else
+        { return JSON.stringify(result) }","args":[]}'
+    headers:
+      accept:
+      - application/json
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '190'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      connection:
+      - close
+      content-length:
+      - '1555'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:38 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"executeScript","sessionId":"b698ea37-e045-7245-bc43-ee08c944d356","status":0,"value":"{\"0\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"1\":{\"result\":\"failed\",\"messages\":[{\"passed\":false,\"type\":\"expect\",\"message\":\"Expected
+        ''documents/1'' to equal ''documents/2''.\",\"trace\":{\"stack\":\"@http://localhost:3000/assets/jasmine.js?body=1:102\\n@http://localhost:3000/assets/jasmine.js?body=1:1171\\n@http://localhost:3000/assets/app/models/document_spec.js?body=1:13\\n@http://localhost:3000/assets/jasmine.js?body=1:996\\n@http://localhost:3000/assets/jasmine.js?body=1:1785\\n@http://localhost:3000/assets/jasmine.js?body=1:1738\\n@http://localhost:3000/assets/jasmine.js?body=1:2065\\n@http://localhost:3000/assets/jasmine.js?body=1:1785\\n@http://localhost:3000/assets/jasmine.js?body=1:1781\\n@http://localhost:3000/assets/jasmine.js?body=1:2039\\n@http://localhost:3000/assets/jasmine.js?body=1:2066\\n@http://localhost:3000/assets/jasmine.js?body=1:1795\\n@http://localhost:3000/assets/jasmine.js?body=1:1775\\n\"}}]},\"2\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"3\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"4\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}},{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]}}"}'
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:38 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:7055/hub/session/b698ea37-e045-7245-bc43-ee08c944d356
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=UTF-8
+      connection:
+      - close
+      content-length:
+      - '88'
+      server:
+      - httpd.js
+      date:
+      - Sat, 29 Sep 2012 21:02:38 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"name":"quit","sessionId":"b698ea37-e045-7245-bc43-ee08c944d356","status":0,"value":""}'
+    http_version: '1.1'
+  recorded_at: Sat, 29 Sep 2012 21:02:38 GMT
+recorded_with: VCR 2.2.5

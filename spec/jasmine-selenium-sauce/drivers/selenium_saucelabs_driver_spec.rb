@@ -2,18 +2,13 @@ require 'spec_helper'
 require 'sauce_config'
 require 'selenium_saucelabs_driver'
 require 'sample_results'
+require 'selenium_driver_fixtures'
 
 describe Jasmine::Sauce::CI::SeleniumSauceLabsDriver do
 
   let(:under_test) { Jasmine::Sauce::CI::SeleniumSauceLabsDriver.new(config) }
   let(:config) { Jasmine::Sauce::CI::SauceConfig.new }
   let(:driver) { double("SeleniumWebDriver") }
-
-  shared_context "create driver is stubbed" do
-    before do
-      Jasmine::Sauce::CI::SeleniumSauceLabsDriver.any_instance.should_receive(:create_driver).with(config).and_return(driver)
-    end
-  end
 
   describe "#create_driver" do
     let(:selenium_client) { double("Selenium::WebDriver::Remote::Http::Default") }
@@ -38,46 +33,9 @@ describe Jasmine::Sauce::CI::SeleniumSauceLabsDriver do
     it("should interact with webdriver correctly") { subject }
   end
 
-  describe "#connect" do
-    include_context "create driver is stubbed"
-    let(:url) { "http://jasmine.server.url/jasmine" }
-    let(:navigator) { double("SeleniumNavigator") }
-    subject { under_test.connect(url) }
+  shared_context "create driver is stubbed" do
     before do
-      driver.should_receive(:navigate).and_return(navigator)
-      navigator.should_receive(:to).with(url)
-    end
-
-    specify { expect { subject }.not_to raise_error }
-  end
-
-  describe "#disconnect" do
-    include_context "create driver is stubbed"
-    subject { under_test.disconnect }
-    before do
-      driver.should_receive(:quit)
-    end
-
-    specify { expect { subject }.not_to raise_error }
-  end
-
-  describe "#evaluate_js" do
-    include_context "create driver is stubbed"
-    let(:script) { "the javascript" }
-    subject { under_test.evaluate_js(script) }
-    before do
-      driver.should_receive(:execute_script).and_return(script_result)
-    end
-
-    context "when simple result" do
-      let(:script_result) { "true" }
-      it { should be_true }
-    end
-
-    context "when json result" do
-      include_context "suites sample"
-      let(:script_result) { suites.to_json }
-      it { should eq(JSON.parse(script_result)) }
+      Jasmine::Sauce::CI::SeleniumSauceLabsDriver.any_instance.should_receive(:create_driver).with(config).and_return(driver)
     end
   end
 
@@ -101,6 +59,10 @@ describe Jasmine::Sauce::CI::SeleniumSauceLabsDriver do
     it { subject['record-video'].should eq "video" }
     it { subject['idle-timeout'].should eq "idle" }
     it { subject['max-duration'].should eq "duration" }
+  end
+
+  it_behaves_like "selenium driver" do
+    include_context "create driver is stubbed"
   end
 
 end
