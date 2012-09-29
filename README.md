@@ -18,61 +18,59 @@ Or install it yourself as:
 
     $ gem install jasmine-selenium-sauce
 
-## Usage
-
-### Running Jasmine via SauceLabs
+## Running Jasmine via SauceLabs
 
     rake jasmine:sauce
 
-#### Required Environment Variables
+### Required Environment Variables
 
 Requires the following environment variables to be set:
 
-##### SAUCELABS_URL
+#### SAUCELABS_URL
 
 URL for Saucelabs with your credentials included:
 
     SAUCELABS_URL=http://username:password@ondemand.saucelabs.com:80/wd/hub
 
-##### JASMINE_URL
+#### JASMINE_URL
 
 Where your Jasmine tests are hosted:
 
     JASMINE_URL=http://my.server.com/jasmine
 
-##### SAUCE_BROWSER
+#### SAUCE_BROWSER
 
 Which browser SauceLabs should use to run your tests:
 
     SAUCE_BROWSER=chrome
 
-#### Optional Configuration
+### Optional Configuration
 
-##### RSpec
+#### RSpec
 
 You can specify the format of the RSpec report with:
 
     JASMINE_SPEC_FORMAT=documentation
 
-##### Sauce Labs Configuration
+#### Sauce Labs Configuration
 
 See [sauce_config.rb](https://github.com/darend/jasmine-selenium-sauce/tree/master/lib/jasmine-selenium-sauce/sauce_config.rb)
 
-### Running Jasmine via local browser
+## Running Jasmine via local browser
 
     rake jasmine:browser
 
-#### Required Environment Variables
+### Required Environment Variables
 
 Requires the following environment variables to be set:
 
-##### JASMINE_URL
+#### JASMINE_URL
 
 Where your Jasmine tests are hosted:
 
     JASMINE_URL=http://my.server.com/jasmine
 
-##### LOCAL_BROWSER
+#### LOCAL_BROWSER
 
 Which browser that will be used to run your tests. Selenium may require a driver be installed depending the driver. See
 the Selenium documentation for more details.
@@ -81,9 +79,9 @@ the Selenium documentation for more details.
 
 See [Which browsers does WebDriver support?](http://code.google.com/p/selenium/wiki/FrequentlyAskedQuestions#Q:_Which_browsers_does_WebDriver_support?).
 
-#### Optional Configuration
+### Optional Configuration
 
-##### RSpec
+#### RSpec
 
 You can specify the format of the RSpec report with:
 
