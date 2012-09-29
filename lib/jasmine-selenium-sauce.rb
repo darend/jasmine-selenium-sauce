@@ -5,8 +5,6 @@ require 'jasmine-selenium-sauce/browser_config'
 require 'jasmine-selenium-sauce/sauce_config'
 require 'jasmine-selenium-sauce/selenium_runner'
 require 'jasmine-selenium-sauce/drivers'
-#require 'jasmine-selenium-sauce/drivers/selenium_browser_driver'
-#require 'jasmine-selenium-sauce/drivers/selenium_saucelabs_driver'
 
 module Jasmine
   module Sauce
