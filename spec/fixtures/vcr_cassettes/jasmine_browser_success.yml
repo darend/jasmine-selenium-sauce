@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://127.0.0.1:7057/hub/session
+    uri: http://127.0.0.1:7058/hub/session
     body:
       encoding: UTF-8
       string: ! '{"desiredCapabilities":{"browserName":"firefox","version":"","platform":"ANY","javascriptEnabled":true,"cssSelectorsEnabled":true,"takesScreenshot":true,"nativeEvents":false,"rotatable":false}}'
@@ -37,7 +37,7 @@ http_interactions:
   recorded_at: Sat, 29 Sep 2012 21:00:30 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:7057/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417
+    uri: http://127.0.0.1:7058/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417
     body:
       encoding: US-ASCII
       string: ''
@@ -68,7 +68,7 @@ http_interactions:
   recorded_at: Sat, 29 Sep 2012 21:00:30 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:7057/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/url
+    uri: http://127.0.0.1:7058/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/url
     body:
       encoding: UTF-8
       string: ! '{"url":"http://localhost:3000/jasmine"}'
@@ -103,7 +103,7 @@ http_interactions:
   recorded_at: Sat, 29 Sep 2012 21:00:30 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:7057/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
+    uri: http://127.0.0.1:7058/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"return jsApiReporter && jsApiReporter.started","args":[]}'
@@ -138,7 +138,7 @@ http_interactions:
   recorded_at: Sat, 29 Sep 2012 21:00:30 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:7057/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
+    uri: http://127.0.0.1:7058/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"var result = jsApiReporter.suites(); if (window.Prototype
@@ -181,7 +181,7 @@ http_interactions:
   recorded_at: Sat, 29 Sep 2012 21:00:30 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:7057/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
+    uri: http://127.0.0.1:7058/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"return jsApiReporter.finished","args":[]}'
@@ -216,7 +216,7 @@ http_interactions:
   recorded_at: Sat, 29 Sep 2012 21:00:30 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:7057/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
+    uri: http://127.0.0.1:7058/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"var result = jsApiReporter.resultsForSpecs([0,1,2,3,4]);
@@ -253,7 +253,7 @@ http_interactions:
   recorded_at: Sat, 29 Sep 2012 21:00:30 GMT
 - request:
     method: delete
-    uri: http://127.0.0.1:7057/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417
+    uri: http://127.0.0.1:7058/hub/session/0b88b0cf-2e6c-1d43-809f-00d96f249417
     body:
       encoding: US-ASCII
       string: ''

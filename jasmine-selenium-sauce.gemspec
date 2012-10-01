@@ -2,7 +2,7 @@
 require File.expand_path('../lib/jasmine-selenium-sauce/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Daren"]
+  gem.authors       = ["Daren Desjardins"]
   gem.email         = ["darend@gmail.com"]
   gem.description   = %q{Rake tasks for running your Jasmine suite via a local browser or through SauceLabs}
   gem.summary       = %q{Rake tasks for running your Jasmine suite via a local browser or through SauceLabs. Can be used in your CI builds to enable running Jasmine suites}
@@ -23,6 +23,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rb-fsevent'
   gem.add_development_dependency 'vcr'
 
+  gem.add_dependency 'localtunnel', "~> 0.3"
   gem.add_dependency 'rspec', ">= 2.0"
-  gem.add_dependency 'selenium-webdriver'
+  gem.add_dependency 'selenium-webdriver', "> 2.0.0"
 end
