@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'selenium_driver'
 require 'selenium_browser_driver'
 require 'sample_results'
 require 'selenium_driver_fixtures'

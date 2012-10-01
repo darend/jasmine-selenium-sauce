@@ -1,5 +1,3 @@
-require_relative 'selenium_driver'
-
 module Jasmine
   module Sauce
     module CI

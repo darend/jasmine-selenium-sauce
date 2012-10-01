@@ -1,5 +1,5 @@
-require_relative 'spec_helper'
-require_relative 'vcr_helper'
+require 'spec_helper'
+require 'vcr_helper'
 require 'jasmine-selenium-sauce'
 require 'browser_config'
 require 'sauce_config'

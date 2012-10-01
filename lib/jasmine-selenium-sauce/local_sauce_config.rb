@@ -1,5 +1,3 @@
-require_relative 'sauce_config'
-
 module Jasmine
   module Sauce
     module CI
