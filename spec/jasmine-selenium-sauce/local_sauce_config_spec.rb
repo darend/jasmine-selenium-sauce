@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'config_fixtures'
+require 'sauce_config'
 require 'local_sauce_config'
 
 describe Jasmine::Sauce::CI::LocalSauceConfig do

@@ -1,6 +1,7 @@
 ## 1.2.0
 
 - Added rake task for running jasmine suite through SauceLabs against localhost using a tunnel
+- Compatible with Ruby 1.8.7
 
 ## 1.1.1
 

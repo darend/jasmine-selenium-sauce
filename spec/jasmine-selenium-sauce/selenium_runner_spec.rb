@@ -83,9 +83,9 @@ describe Jasmine::Sauce::CI::SeleniumRunner do
 
       before {
         driver.should_receive(:evaluate_js).and_return(load_result, suites, jasmine_finished_result,
-                                                       suite_results.select {|k,_| k == '0'},
-                                                       suite_results.select {|k,_| k == '1'},
-                                                       suite_results.select {|k,_| k == '2'})
+                                                       suite_results.reject {|k,_| k != '0'},
+                                                       suite_results.reject {|k,_| k != '1'},
+                                                       suite_results.reject {|k,_| k != '2'})
       }
     end
   end

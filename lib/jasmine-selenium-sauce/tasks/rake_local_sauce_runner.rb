@@ -1,4 +1,4 @@
-require_relative '../../jasmine-selenium-sauce'
+require File.join(File.dirname(__FILE__), '../../jasmine-selenium-sauce')
 
 begin
   config = Jasmine::Sauce::CI::LocalSauceConfig.new

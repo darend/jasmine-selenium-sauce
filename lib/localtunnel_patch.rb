@@ -1,5 +1,3 @@
-
-
 class LocalTunnel::Tunnel
 
   #

@@ -2,7 +2,7 @@
 class ReporterFake
 
   def report(jasmine_results)
-    results = { passed: [], failed: []}
+    results = { :passed => [], :failed => []}
     jasmine_results.suites.each do |suite|
       child_results = process_children(suite["children"], jasmine_results)
       results[:passed].concat(child_results[:passed]) if child_results[:passed]
@@ -12,7 +12,7 @@ class ReporterFake
   end
 
   def process_children(children, jasmine_results)
-    results = { passed: [], failed: []}
+    results = { :passed => [], :failed => []}
     children.each do |node|
       type = node["type"]
       if type == "suite"
