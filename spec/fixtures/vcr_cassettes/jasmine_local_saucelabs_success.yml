@@ -1,6 +1,36 @@
 ---
 http_interactions:
 - request:
+    method: get
+    uri: http://open.localtunnel.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 01 Oct 2012 16:10:23 GMT
+      content-length:
+      - '145'
+      content-type:
+      - application/json
+      server:
+      - TwistedWeb/10.1.0
+    body:
+      encoding: US-ASCII
+      string: ! '{"host": "3pts.localtunnel.com", "through_port": 32009, "banner":
+        "This localtunnel service is brought to you by Twilio.", "user": "localtunnel"}'
+    http_version: '1.1'
+  recorded_at: Mon, 01 Oct 2012 16:07:57 GMT
+- request:
     method: post
     uri: http://username:password@ondemand.saucelabs.com/wd/hub/session
     body:
@@ -25,23 +55,23 @@ http_interactions:
       transfer-encoding:
       - chunked
       date:
-      - Mon, 01 Oct 2012 04:47:31 GMT
+      - Mon, 01 Oct 2012 16:08:19 GMT
       connection:
       - close
       content-type:
       - text/html
       location:
-      - http://ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7
+      - http://ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772
       server:
       - monocle/0.17
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:39 GMT
+  recorded_at: Mon, 01 Oct 2012 16:08:25 GMT
 - request:
     method: get
-    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +90,7 @@ http_interactions:
       transfer-encoding:
       - chunked
       date:
-      - Mon, 01 Oct 2012 04:47:39 GMT
+      - Mon, 01 Oct 2012 16:08:25 GMT
       connection:
       - close
       content-type:
@@ -69,7 +99,7 @@ http_interactions:
       - monocle/0.17
     body:
       encoding: US-ASCII
-      string: ! '{"status": 0, "sessionId": "ac1313f82b59423d8875dc9a9661caa7", "hCode":
+      string: ! '{"status": 0, "sessionId": "be7b2df1123741d2afe6e2e39c34c772", "hCode":
         25537913, "value": {"rotatable": false, "browserConnectionEnabled": false,
         "acceptSslCerts": false, "cssSelectorsEnabled": true, "javascriptEnabled":
         true, "nativeEvents": true, "databaseEnabled": false, "chrome.chromedriverVersion":
@@ -78,13 +108,13 @@ http_interactions:
         "applicationCacheEnabled": false, "webStorageEnabled": true, "handlesAlerts":
         true, "chrome.nativeEvents": false}, "class": "org.openqa.selenium.remote.Response"}'
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:41 GMT
+  recorded_at: Mon, 01 Oct 2012 16:08:25 GMT
 - request:
     method: post
-    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7/url
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772/url
     body:
       encoding: UTF-8
-      string: ! '{"url":"http://jasmine.server.com/jasmine"}'
+      string: ! '{"url":"http://3pts.localtunnel.com/jasmine"}'
     headers:
       accept:
       - application/json
@@ -102,7 +132,7 @@ http_interactions:
       message: No Content
     headers:
       date:
-      - Mon, 01 Oct 2012 04:47:41 GMT
+      - Mon, 01 Oct 2012 16:08:25 GMT
       connection:
       - close
       content-type:
@@ -113,10 +143,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:48 GMT
+  recorded_at: Mon, 01 Oct 2012 16:08:59 GMT
 - request:
     method: post
-    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7/execute
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"return jsApiReporter && jsApiReporter.started","args":[]}'
@@ -139,7 +169,7 @@ http_interactions:
       transfer-encoding:
       - chunked
       date:
-      - Mon, 01 Oct 2012 04:47:48 GMT
+      - Mon, 01 Oct 2012 16:09:00 GMT
       connection:
       - close
       content-type:
@@ -148,13 +178,13 @@ http_interactions:
       - monocle/0.17
     body:
       encoding: US-ASCII
-      string: ! '{"status": 0, "sessionId": "ac1313f82b59423d8875dc9a9661caa7", "hCode":
-        8886368, "class": "org.openqa.selenium.remote.Response", "value": true}'
+      string: ! '{"status": 0, "sessionId": "be7b2df1123741d2afe6e2e39c34c772", "hCode":
+        2416253, "class": "org.openqa.selenium.remote.Response", "value": true}'
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:49 GMT
+  recorded_at: Mon, 01 Oct 2012 16:08:59 GMT
 - request:
     method: post
-    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7/execute
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"var result = jsApiReporter.suites(); if (window.Prototype
@@ -179,7 +209,7 @@ http_interactions:
       transfer-encoding:
       - chunked
       date:
-      - Mon, 01 Oct 2012 04:47:49 GMT
+      - Mon, 01 Oct 2012 16:09:00 GMT
       connection:
       - close
       content-type:
@@ -188,8 +218,8 @@ http_interactions:
       - monocle/0.17
     body:
       encoding: US-ASCII
-      string: ! '{"status": 0, "sessionId": "ac1313f82b59423d8875dc9a9661caa7", "hCode":
-        32644176, "class": "org.openqa.selenium.remote.Response", "value": "[{\"id\":0,\"name\":\"Document
+      string: ! '{"status": 0, "sessionId": "be7b2df1123741d2afe6e2e39c34c772", "hCode":
+        2159159, "class": "org.openqa.selenium.remote.Response", "value": "[{\"id\":0,\"name\":\"Document
         Model\",\"type\":\"suite\",\"children\":[{\"id\":1,\"name\":\"URL\",\"type\":\"suite\",\"children\":[{\"id\":0,\"name\":\"when
         new\",\"type\":\"spec\",\"children\":[]},{\"id\":1,\"name\":\"when is not
         new\",\"type\":\"spec\",\"children\":[]}]}]},{\"id\":2,\"name\":\"Documents
@@ -197,10 +227,10 @@ http_interactions:
         index on blank hash\",\"type\":\"spec\",\"children\":[]},{\"id\":3,\"name\":\"fires
         new\",\"type\":\"spec\",\"children\":[]},{\"id\":4,\"name\":\"fires edit\",\"type\":\"spec\",\"children\":[]}]}]}]"}'
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:49 GMT
+  recorded_at: Mon, 01 Oct 2012 16:08:59 GMT
 - request:
     method: post
-    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7/execute
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"return jsApiReporter.finished","args":[]}'
@@ -223,7 +253,7 @@ http_interactions:
       transfer-encoding:
       - chunked
       date:
-      - Mon, 01 Oct 2012 04:47:49 GMT
+      - Mon, 01 Oct 2012 16:09:00 GMT
       connection:
       - close
       content-type:
@@ -232,13 +262,13 @@ http_interactions:
       - monocle/0.17
     body:
       encoding: US-ASCII
-      string: ! '{"status": 0, "sessionId": "ac1313f82b59423d8875dc9a9661caa7", "hCode":
-        14513572, "class": "org.openqa.selenium.remote.Response", "value": true}'
+      string: ! '{"status": 0, "sessionId": "be7b2df1123741d2afe6e2e39c34c772", "hCode":
+        22447700, "class": "org.openqa.selenium.remote.Response", "value": true}'
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:50 GMT
+  recorded_at: Mon, 01 Oct 2012 16:08:59 GMT
 - request:
     method: post
-    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7/execute
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772/execute
     body:
       encoding: UTF-8
       string: ! '{"script":"var result = jsApiReporter.resultsForSpecs([0,1,2,3,4]);
@@ -263,7 +293,7 @@ http_interactions:
       transfer-encoding:
       - chunked
       date:
-      - Mon, 01 Oct 2012 04:47:50 GMT
+      - Mon, 01 Oct 2012 16:09:00 GMT
       connection:
       - close
       content-type:
@@ -272,25 +302,13 @@ http_interactions:
       - monocle/0.17
     body:
       encoding: US-ASCII
-      string: ! '{"status": 0, "sessionId": "ac1313f82b59423d8875dc9a9661caa7", "hCode":
-        13926634, "class": "org.openqa.selenium.remote.Response", "value": "{\"0\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"1\":{\"result\":\"failed\",\"messages\":[{\"passed\":false,\"type\":\"expect\",\"message\":\"Expected
-        ''documents/1'' to equal ''documents/2''.\",\"trace\":{\"stack\":\"Error:
-        Expected ''documents/1'' to equal ''documents/2''.\\n    at new jasmine.ExpectationResult
-        (http://jasmine.server.com/assets/jasmine.js?body=1:102:32)\\n    at null.toEqual
-        (http://jasmine.server.com/assets/jasmine.js?body=1:1166:29)\\n    at null.<anonymous>
-        (http://jasmine.server.com/assets/app/models/document_spec.js?body=1:13:43)\\n    at
-        jasmine.Block.execute (http://jasmine.server.com/assets/jasmine.js?body=1:996:15)\\n    at
-        jasmine.Queue.next_ (http://jasmine.server.com/assets/jasmine.js?body=1:1785:31)\\n    at
-        jasmine.Queue.start (http://jasmine.server.com/assets/jasmine.js?body=1:1738:8)\\n    at
-        jasmine.Spec.execute (http://jasmine.server.com/assets/jasmine.js?body=1:2065:14)\\n    at
-        jasmine.Queue.next_ (http://jasmine.server.com/assets/jasmine.js?body=1:1785:31)\\n    at
-        onComplete (http://jasmine.server.com/assets/jasmine.js?body=1:1781:18)\\n    at
-        jasmine.Spec.finish (http://jasmine.server.com/assets/jasmine.js?body=1:2039:5)\"}}]},\"2\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"3\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"4\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}},{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]}}"}'
+      string: ! '{"status": 0, "sessionId": "be7b2df1123741d2afe6e2e39c34c772", "hCode":
+        25232872, "class": "org.openqa.selenium.remote.Response", "value": "{\"0\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"1\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"2\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"3\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]},\"4\":{\"result\":\"passed\",\"messages\":[{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}},{\"passed\":true,\"type\":\"expect\",\"message\":\"Passed.\",\"trace\":{}}]}}"}'
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:51 GMT
+  recorded_at: Mon, 01 Oct 2012 16:08:59 GMT
 - request:
     method: delete
-    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/ac1313f82b59423d8875dc9a9661caa7
+    uri: http://username:password@ondemand.saucelabs.com/wd/hub/session/be7b2df1123741d2afe6e2e39c34c772
     body:
       encoding: US-ASCII
       string: ''
@@ -307,7 +325,7 @@ http_interactions:
       message: No Content
     headers:
       date:
-      - Mon, 01 Oct 2012 04:47:51 GMT
+      - Mon, 01 Oct 2012 16:09:00 GMT
       connection:
       - close
       content-type:
@@ -318,5 +336,5 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Mon, 01 Oct 2012 04:47:54 GMT
+  recorded_at: Mon, 01 Oct 2012 16:09:01 GMT
 recorded_with: VCR 2.2.5

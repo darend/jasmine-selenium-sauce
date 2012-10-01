@@ -5,23 +5,21 @@
 Rake tasks for running your Jasmine suite via a local browser or through SauceLabs using the
 [Selenium Webdriver](http://seleniumhq.org/projects/webdriver/).
 
-Can be used in your CI builds to enable running Jasmine suites.
+Can be used in your CI builds to enable running Jasmine suites. The Jasmine results are reported using RSpec to make
+parsing easy.
 
-## Installation
+# Installation
 
 Add this line to your application's Gemfile:
 
     gem 'jasmine-selenium-sauce'
 
-And then execute:
+# Running Jasmine via SauceLabs
 
-    $ bundle
+## Remote Jasmine Server
 
-Or install it yourself as:
-
-    $ gem install jasmine-selenium-sauce
-
-## Running Jasmine via SauceLabs
+When you want to run a Jasmine suite hosted on a publicly available host. Uses Selenium to connect to SauceLabs, and 
+requests a browser instance to run your suite.
 
     rake jasmine:sauce
 
@@ -29,68 +27,91 @@ Or install it yourself as:
 
 Requires the following environment variables to be set:
 
-#### SAUCELABS_URL
+```shell
+SAUCELABS_URL=http://username:password@ondemand.saucelabs.com:80/wd/hub
+```
+- URL for Saucelabs with your credentials included
 
-URL for Saucelabs with your credentials included:
+```shell
+JASMINE_URL=http://my.server.com/jasmine
+```
+- Where your Jasmine tests are hosted
 
-    SAUCELABS_URL=http://username:password@ondemand.saucelabs.com:80/wd/hub
+```shell
+SAUCE_BROWSER=chrome
+```
+- Which browser SauceLabs should use to run your tests
 
-#### JASMINE_URL
+## Local Jasmine Server behind a Firewall
 
-Where your Jasmine tests are hosted:
+When you want to run a Jasmine suite hosted on an internal host. Uses [LocalTunnel](http://progrium.com/localtunnel/)
+to make localhost available through a tunnel. It then uses Selenium to connect to SauceLabs, and requests a 
+browser instance to run your suite.
 
-    JASMINE_URL=http://my.server.com/jasmine
-
-#### SAUCE_BROWSER
-
-Which browser SauceLabs should use to run your tests:
-
-    SAUCE_BROWSER=chrome
-
-### Optional Configuration
-
-#### RSpec
-
-You can specify the format of the RSpec report with:
-
-    JASMINE_SPEC_FORMAT=documentation
-
-#### Sauce Labs Configuration
-
-See [sauce_config.rb](https://github.com/darend/jasmine-selenium-sauce/tree/master/lib/jasmine-selenium-sauce/sauce_config.rb)
-
-## Running Jasmine via local browser
-
-    rake jasmine:browser
+    rake jasmine:local_sauce
 
 ### Required Environment Variables
 
 Requires the following environment variables to be set:
 
-#### JASMINE_URL
+```shell
+SAUCELABS_URL=http://username:password@ondemand.saucelabs.com:80/wd/hub
+```
+- URL for Saucelabs with your credentials included
 
-Where your Jasmine tests are hosted:
+```shell
+JASMINE_PORT=3000
+```
+- Port on localhost where jasmine tests are located
 
-    JASMINE_URL=http://my.server.com/jasmine
+```shell
+SAUCE_BROWSER=chrome
+```
+- Which browser SauceLabs should use to run your tests
 
-#### LOCAL_BROWSER
+## Optional Configuration
 
-Which browser that will be used to run your tests. Selenium may require a driver be installed depending the driver. See
-the Selenium documentation for more details.
+### RSpec
 
-    LOCAL_BROWSER=firefox
+```shell
+JASMINE_SPEC_FORMAT=documentation
+```
+- Allows you to control the format of the RSpec report
 
+### Additional Sauce Labs Configuration
+
+See [sauce_config.rb](https://github.com/darend/jasmine-selenium-sauce/tree/master/lib/jasmine-selenium-sauce/sauce_config.rb)
+
+# Running Jasmine via local browser
+
+    rake jasmine:browser
+
+## Required Environment Variables
+
+Requires the following environment variables to be set:
+
+```shell
+JASMINE_URL=http://my.server.com/jasmine
+```
+- Where your Jasmine tests are hosted
+
+```shell
+LOCAL_BROWSER=firefox
+```
+- Which browser that will be used to run your tests. Selenium may require a driver be installed depending the driver. See
+the Selenium documentation for more details
 See [Which browsers does WebDriver support?](http://code.google.com/p/selenium/wiki/FrequentlyAskedQuestions#Q:_Which_browsers_does_WebDriver_support?).
 
-### Optional Configuration
+## Optional Configuration
 
-#### RSpec
+### RSpec
 
-You can specify the format of the RSpec report with:
+```shell
+JASMINE_SPEC_FORMAT=documentation
+```
+- Allows you to control the format of the RSpec report
 
-    JASMINE_SPEC_FORMAT=documentation
-
-## Contributing
+# Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
