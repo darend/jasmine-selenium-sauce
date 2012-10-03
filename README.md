@@ -8,6 +8,10 @@ Rake tasks for running your Jasmine suite via a local browser or through SauceLa
 Can be used in your CI builds to enable running Jasmine suites. The Jasmine results are reported using RSpec to make
 parsing easy.
 
+# Requirements
+
+Only requires that you have Jasmine available as a route in your application for testing. Recommend using [Jasminerice](https://github.com/bradphelan/jasminerice)
+
 # Installation
 
 Add this line to your application's Gemfile:
