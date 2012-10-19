@@ -20,7 +20,7 @@ Add this line to your application's Gemfile:
 
 # Running Jasmine via SauceLabs
 
-## Remote Jasmine Server
+## Server with Public IP
 
 When you want to run a Jasmine suite hosted on a publicly available host. Uses Selenium to connect to SauceLabs, and 
 requests a browser instance to run your suite.
@@ -46,11 +46,11 @@ SAUCE_BROWSER=chrome
 ```
 - Which browser SauceLabs should use to run your tests
 
-## Local Jasmine Server behind a Firewall
+## Server behind a Firewall
 
-When you want to run a Jasmine suite hosted on an internal host. Uses [LocalTunnel](http://progrium.com/localtunnel/)
-to make localhost available through a tunnel. It then uses Selenium to connect to SauceLabs, and requests a 
-browser instance to run your suite.
+This when you want to run a Jasmine suite hosted on an internal host. It will use [LocalTunnel](http://progrium.com/localtunnel/)
+to make your system available through a public tunnel to a specific port. Selenium is then used to connect to SauceLabs, and request a 
+browser instance to run your suite. The tunnel is then closed down.
 
     rake jasmine:local_sauce
 
@@ -87,6 +87,8 @@ JASMINE_SPEC_FORMAT=documentation
 See [sauce_config.rb](https://github.com/darend/jasmine-selenium-sauce/tree/master/lib/jasmine-selenium-sauce/sauce_config.rb)
 
 # Running Jasmine via local browser
+
+This task is used when you want to run Jasmine using a local browser such as Firefox, Chrome, etc.
 
     rake jasmine:browser
 
