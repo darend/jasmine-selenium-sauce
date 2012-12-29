@@ -13,6 +13,18 @@ module Jasmine
         def jasmine_server_port
           ENV['JASMINE_PORT']
         end
+
+        def ssh_key_path
+          ENV['SSH_KEY_PATH']
+        end
+
+        def ssh_key
+          if !ssh_key_path.nil? && File.exists?(ssh_key_path)
+            return File.read(ssh_key_path)
+          else
+            return nil
+          end
+        end
       end
     end
   end

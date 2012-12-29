@@ -58,4 +58,37 @@ describe Jasmine::Sauce::CI::LocalSauceConfig do
   it_behaves_like 'sauce config' do
     let(:under_test) { Jasmine::Sauce::CI::LocalSauceConfig.new }
   end
+
+  describe "#ssh_key_path" do
+    let(:path) { "path/to/my/key.pub" }
+    before { ENV['SSH_KEY_PATH'] = path }
+    after { ENV.delete('SSH_KEY_PATH') }
+    its(:ssh_key_path) { should eq(path)}
+  end
+
+  describe "#ssh_key" do
+    context "when key path is nil" do
+      before { ENV['SSH_KEY_PATH'] = nil }
+      its(:ssh_key) { should be_nil }
+    end
+
+    context "when key path is set" do
+      let(:path) { "path/to/my/key.pub" }
+      before { ENV['SSH_KEY_PATH'] = path }
+
+      context "when file exists" do
+        before { File.stub(:exists?).and_return(false) }
+        its(:ssh_key) { should be_nil }
+      end
+
+      context "when file does not exist" do
+        let(:content) { "content of file" }
+        before do
+          File.stub(:exists?).and_return(true)
+          File.stub(:read).and_return(content)
+        end
+        its(:ssh_key) { should eq(content) }
+      end
+    end
+  end
 end

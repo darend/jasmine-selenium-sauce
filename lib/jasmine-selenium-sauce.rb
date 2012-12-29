@@ -27,7 +27,7 @@ module Jasmine
 
         def self.run_local_via_saucelabs(local_sauce_config, reporter = RspecReporter.new)
           puts "Establishing tunnel to port #{local_sauce_config.jasmine_server_port}"
-          tunnel = LocalTunnel::Tunnel.new(local_sauce_config.jasmine_server_port,nil)
+          tunnel = LocalTunnel::Tunnel.new(local_sauce_config.jasmine_server_port,local_sauce_config.ssh_key)
           response = tunnel.register_tunnel
           tunnel.start_tunnel do
             ENV['JASMINE_URL'] = "http://#{response['host']}/jasmine"

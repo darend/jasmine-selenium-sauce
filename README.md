@@ -75,6 +75,13 @@ SAUCE_BROWSER=chrome
 
 ## Optional Configuration
 
+### Localtunnel
+
+```shell
+SSH_KEY_PATH=~/home/me/id_rsa.pub
+```
+- Path to a public key to be used by LocalTunnel
+
 ### RSpec
 
 ```shell
